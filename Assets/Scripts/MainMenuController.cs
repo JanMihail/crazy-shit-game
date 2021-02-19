@@ -4,20 +4,21 @@ using System;
 public class MainMenuController : MonoBehaviour
 {
     public PlayerSettings playerSettings;
-    public TMPro.TextMeshProUGUI textLength;
+    public TMPro.TextMeshProUGUI lengthText;
 
     public void SliderLengthOnChange(float value)
     {
         playerSettings.Length = Convert.ToInt32(value);
     }
 
-    public void ButtonStartOnClick()
+    public void ApplicationQuit()
     {
-        
+        Debug.Log("Application.Quit()");
+        Application.Quit();
     }
 
     private void Update()
     {
-        textLength.text = String.Format("LENGTH: {0}", playerSettings.Length);
+        lengthText.text = String.Format("{0}", playerSettings.Length);
     }
 }
