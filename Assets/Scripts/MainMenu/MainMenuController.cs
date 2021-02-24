@@ -1,12 +1,19 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using System;
 
 public class MainMenuController : MonoBehaviour
 {
     public PlayerSettings playerSettings;
     public TMPro.TextMeshProUGUI lengthText;
-    public UnityEngine.UI.Slider lengthSlider;
+    public Slider lengthSlider;
+    public Image background;
+    public Sprite backgroundLite;
+    public Sprite backgroundDark;
+    public Image lamp;
+    public Sprite lampLite;
+    public Sprite lampDark;
 
     private void Start()
     {
@@ -23,6 +30,11 @@ public class MainMenuController : MonoBehaviour
         playerSettings.Length = Convert.ToInt32(value);
     }
 
+    public void LampClick()
+    {
+        playerSettings.LightOn = !playerSettings.LightOn;
+    }
+
     public void ApplicationQuit()
     {
         Debug.Log("Application.Quit()");
@@ -32,5 +44,15 @@ public class MainMenuController : MonoBehaviour
     private void Update()
     {
         lengthText.text = String.Format("{0}", playerSettings.Length);
+
+        if (playerSettings.LightOn)
+        {
+            background.sprite = backgroundLite;
+            lamp.sprite = lampLite;
+        } else
+        {
+            background.sprite = backgroundDark;
+            lamp.sprite = lampDark;
+        }
     }
 }
