@@ -9,8 +9,6 @@ public class CameraMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // transform.position.Set(obj.position.x, obj.position.y + 2, transform.position.z);
-
-        transform.position = new Vector3(obj.position.x, (obj.position.y + 2), transform.position.z);
+        transform.position = new Vector3(obj.position.x, obj.position.y, transform.position.z);
     }
 }
