@@ -5,6 +5,7 @@ public class SwitchKakahenTurretController : MonoBehaviour
     public GameObject kakahenControllerMobile;
     public GameObject turretControllerMobile;
     public GameObject kakahenCamera;
+    public GameObject turret;
     public GameObject buttonFire;
     public GameObject rightJoystick;
 
@@ -22,9 +23,15 @@ public class SwitchKakahenTurretController : MonoBehaviour
         turretControllerMobile.SetActive(!enableKakahenControl);
         buttonFire.SetActive(!enableKakahenControl);
         rightJoystick.SetActive(!enableKakahenControl);
+        turret.SetActive(!enableKakahenControl);
 
         kakahenCamera.SetActive(enableKakahenControl);
         kakahenControllerMobile.SetActive(enableKakahenControl);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 
 }
