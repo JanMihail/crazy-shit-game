@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9094430373468129388}
+  - component: {fileID: 6826364881892752455}
   m_Layer: 0
-  m_Name: BulletStartPoint
+  m_Name: BulletLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,6 +31,21 @@ Transform:
   m_Father: {fileID: 9094430375221002216}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6826364881892752455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9094430373468129387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a19d9d8c703528c49b5bdd7fb5a97b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 8327811159514388765, guid: 40813817ccd3e1f498bf516589c50b8c,
+    type: 3}
+  force: 100
 --- !u!1 &9094430374780263299
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,9 +136,8 @@ GameObject:
   - component: {fileID: 9094430375221002216}
   - component: {fileID: 9094430375221002217}
   - component: {fileID: 9094430375221002218}
-  - component: {fileID: 9094430375221002219}
   m_Layer: 0
-  m_Name: Weapon
+  m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,7 +151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9094430375221002215}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.3, z: -6}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9094430374780263302}
@@ -171,22 +186,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 15
---- !u!114 &9094430375221002219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9094430375221002215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a19d9d8c703528c49b5bdd7fb5a97b72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8327811159514388765, guid: 40813817ccd3e1f498bf516589c50b8c,
-    type: 3}
-  bulletStartPoint: {fileID: 9094430373468129388}
-  bulletForce: 100
 --- !u!1 &9094430375383658417
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,7 +198,7 @@ GameObject:
   - component: {fileID: 9094430375383658419}
   - component: {fileID: 9094430375383658418}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
