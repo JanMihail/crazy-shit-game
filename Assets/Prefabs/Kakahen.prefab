@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4579928969812970272}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1902878728927982642
 Rigidbody:
@@ -40,7 +40,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1902878728927982655}
   serializedVersion: 2
-  m_Mass: 0.2
+  m_Mass: 0.96
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -93,7 +93,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4579928969812970272}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &2125469016453569844
 Rigidbody:
@@ -103,7 +103,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125469016453569840}
   serializedVersion: 2
-  m_Mass: 0.4
+  m_Mass: 0.97
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -139,7 +139,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   m_UseSpring: 1
   m_Spring:
-    spring: 10
+    spring: 5
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -191,7 +191,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4579928969812970272}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &2368214510445753493
 Rigidbody:
@@ -201,7 +201,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2368214510445753489}
   serializedVersion: 2
-  m_Mass: 0.8
+  m_Mass: 0.99
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -237,7 +237,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   m_UseSpring: 1
   m_Spring:
-    spring: 10
+    spring: 5
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -285,7 +285,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 8.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4845864897291148222}
   - {fileID: 7159468527160129746}
   - {fileID: 2276823409679062105}
   - {fileID: 1107345318250891164}
@@ -324,7 +323,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4579928969812970272}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -90}
 --- !u!137 &4710149921795609630
 SkinnedMeshRenderer:
@@ -382,36 +381,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -3.750001, y: 0.00000023841858, z: 0.00000029802322}
     m_Extent: {x: 4.250001, y: 0.5000001, z: 0.5000006}
   m_DirtyAABB: 0
---- !u!1 &6458216985680777716
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4845864897291148222}
-  m_Layer: 0
-  m_Name: Armature
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4845864897291148222
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6458216985680777716}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.75, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4579928969812970272}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7480535930456482158
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,7 +413,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4579928969812970272}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!54 &7480535930456482146
 Rigidbody:
@@ -490,7 +459,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   m_UseSpring: 1
   m_Spring:
-    spring: 10
+    spring: 5
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -554,7 +523,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4579928969812970272}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &8855505880588134213
 Rigidbody:
@@ -564,7 +533,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8855505880588134209}
   serializedVersion: 2
-  m_Mass: 0.6
+  m_Mass: 0.98
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -600,7 +569,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   m_UseSpring: 1
   m_Spring:
-    spring: 10
+    spring: 5
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
