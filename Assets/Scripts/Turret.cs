@@ -12,10 +12,14 @@ public class Turret : MonoBehaviour
     [Range(-90f, 90f)]
     public float rotateAngleMax = 90f;
 
+    public Rigidbody bulletPrefab;
+    public Transform bulletShootPoint;
+    public float bulletForce = 100f;
+
     private float leftRightAngle = 0.0f;
     private float upDownAngle = 0.0f;
-
     private bool isValid = false;
+    
 
     void Start()
     {
@@ -63,5 +67,11 @@ public class Turret : MonoBehaviour
         upDownAngle = Mathf.Clamp(upDownAngle, rotateAngleMin, rotateAngleMax);
 
         transform.eulerAngles = new Vector3(upDownAngle, leftRightAngle);
+    }
+
+    public void fire()
+    {
+        Rigidbody bullet = Instantiate(bulletPrefab, bulletShootPoint.position, bulletShootPoint.rotation);
+        bullet.AddForce(bulletShootPoint.forward * bulletForce, ForceMode.VelocityChange);
     }
 }

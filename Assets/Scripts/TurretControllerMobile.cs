@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 
-public class TurretController : MonoBehaviour
+public class TurretControllerMobile : MonoBehaviour
 {
     public Turret turret;
+    public VariableJoystick joystickMove;
+    public VariableJoystick joystickRotate;
 
     private float moveHor;
     private float moveVert;
@@ -11,7 +13,6 @@ public class TurretController : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
         updateCoords();
     }
 
@@ -22,12 +23,17 @@ public class TurretController : MonoBehaviour
         turret.rotate(rotHor, rotVert);
     }
 
+    public void fireClick()
+    {
+        turret.fire();
+    }
+
     private void updateCoords()
     {
-        moveHor = Input.GetAxis("WeaponHorizontal");
-        moveVert = Input.GetAxis("WeaponVertical");
+        moveHor = joystickMove.Horizontal;
+        moveVert = joystickMove.Vertical;
 
-        rotHor = Input.GetAxis("Mouse X");
-        rotVert = Input.GetAxis("Mouse Y");
+        rotHor = joystickRotate.Horizontal;
+        rotVert = joystickRotate.Vertical;
     }
 }

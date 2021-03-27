@@ -9,9 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9094430373468129388}
-  - component: {fileID: 6826364881892752455}
   m_Layer: 0
-  m_Name: BulletLauncher
+  m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,28 +23,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9094430373468129387}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.50000006, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0.49999988}
   m_Children: []
-  m_Father: {fileID: 9094430375221002216}
-  m_RootOrder: 1
+  m_Father: {fileID: 9094430374780263302}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6826364881892752455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9094430373468129387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a19d9d8c703528c49b5bdd7fb5a97b72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8327811159514388765, guid: 40813817ccd3e1f498bf516589c50b8c,
-    type: 3}
-  force: 100
 --- !u!1 &9094430374780263299
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +58,8 @@ Transform:
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 2, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 9094430373468129388}
   m_Father: {fileID: 9094430375221002216}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -154,7 +139,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9094430374780263302}
-  - {fileID: 9094430373468129388}
   - {fileID: 9094430375383658420}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -175,6 +159,9 @@ MonoBehaviour:
   rotateSensitivity: 1.5
   rotateAngleMin: -90
   rotateAngleMax: 90
+  bulletPrefab: {fileID: 0}
+  bulletShootPoint: {fileID: 9094430373468129388}
+  bulletForce: 100
 --- !u!1 &9094430375383658417
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +192,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9094430375221002216}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &9094430375383658419
 Camera:
