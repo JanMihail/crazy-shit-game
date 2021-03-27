@@ -134,8 +134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9094430375221002216}
-  - component: {fileID: 9094430375221002217}
-  - component: {fileID: 9094430375221002218}
+  - component: {fileID: 146918650277416389}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -160,7 +159,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9094430375221002217
+--- !u!114 &146918650277416389
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,23 +168,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 9094430375221002215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 074c170b4bb4a924098b7403333ef786, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseSensitivity: 1.5
---- !u!114 &9094430375221002218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9094430375221002215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9360619b276ccee498a6b84ffa3b8976, type: 3}
+  m_Script: {fileID: 11500000, guid: e1d6c835b0f5f1044aa6183e6dcc9468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 15
+  rotateSensitivity: 1.5
+  rotateAngleMin: -90
+  rotateAngleMax: 90
 --- !u!1 &9094430375383658417
 GameObject:
   m_ObjectHideFlags: 0

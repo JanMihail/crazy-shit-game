@@ -154,8 +154,52 @@ Transform:
   - {fileID: 1415605840}
   - {fileID: 1642077655}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &318017584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 318017585}
+  - component: {fileID: 318017586}
+  m_Layer: 0
+  m_Name: TurretController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &318017585
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318017584}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &318017586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318017584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b025993093fb4134590ee5f5ed1d3617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turret: {fileID: 2014003472}
 --- !u!1 &337431121
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 395008278}
   m_Layer: 0
-  m_Name: Environment
+  m_Name: Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -302,7 +346,7 @@ Transform:
   - {fileID: 1670387504}
   - {fileID: 1381423258}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &443149138
 GameObject:
@@ -333,7 +377,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &443149140
 MonoBehaviour:
@@ -349,7 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kakahenPrefab: {fileID: 3802442769394913690, guid: 29801dc1c090d8944b05ae894922e0c6,
     type: 3}
-  count: 1
+  count: 200
   xMin: -40
   xMax: 40
   yMin: 10
@@ -1421,7 +1465,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2014003471
 PrefabInstance:
@@ -1438,7 +1482,7 @@ PrefabInstance:
     - target: {fileID: 9094430375221002216, guid: 60e7b6c93f3510d4bbeae3652ae568e8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9094430375221002216, guid: 60e7b6c93f3510d4bbeae3652ae568e8,
         type: 3}
@@ -1492,6 +1536,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60e7b6c93f3510d4bbeae3652ae568e8, type: 3}
+--- !u!114 &2014003472 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 146918650277416389, guid: 60e7b6c93f3510d4bbeae3652ae568e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2014003471}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d6c835b0f5f1044aa6183e6dcc9468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2110812770
 GameObject:
   m_ObjectHideFlags: 0
