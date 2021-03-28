@@ -2,12 +2,12 @@
 
 public class CameraMover : MonoBehaviour
 {
-    public Transform camera;
+    public Transform cam;
 
     void Update()
     {
-        Vector3 curPos = camera.position;
+        Vector3 curPos = cam.position;
         curPos.x = transform.position.x;
-        camera.position = curPos;
+        cam.position = curPos;
     }
 }

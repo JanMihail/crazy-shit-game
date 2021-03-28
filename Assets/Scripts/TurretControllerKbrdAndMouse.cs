@@ -11,7 +11,7 @@ public class TurretControllerKbrdAndMouse : MonoBehaviour
 
     void Start()
     {
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
         updateCoords();
     }
 
