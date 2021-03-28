@@ -6,6 +6,7 @@ public class KakahenControllerKbrd : MonoBehaviour
 
     private float moveHor;
     private float moveVert;
+    private bool jump = false;
 
     void Start()
     {
@@ -20,11 +21,19 @@ public class KakahenControllerKbrd : MonoBehaviour
     void FixedUpdate()
     {
         kakahen.move(moveHor, moveVert);
+
+        if (jump)
+        {
+            jump = false;
+            kakahen.jump();
+        }
     }
 
     private void updateCoords()
     {
         moveHor = Input.GetAxisRaw("Horizontal");
         moveVert = Input.GetAxisRaw("Vertical");
+        
+        jump = Input.GetAxisRaw("Jump") > 0;
     }
 }
