@@ -11,7 +11,7 @@ public class TurretControllerKbrdAndMouse : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         updateCoords();
     }
 
@@ -20,6 +20,11 @@ public class TurretControllerKbrdAndMouse : MonoBehaviour
         updateCoords();
         turret.move(moveHor, moveVert);
         turret.rotate(rotHor, rotVert);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            turret.fire();
+        }
     }
 
     private void updateCoords()
